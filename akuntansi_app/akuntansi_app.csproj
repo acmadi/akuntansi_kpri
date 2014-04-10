@@ -52,19 +52,22 @@
     <Reference Include="_encryption">
       <HintPath>..\..\project_dll\_connectMySQL\_connectMySQL\bin\Debug\_encryption.dll</HintPath>
     </Reference>
+    <Reference Include="_tools">
+      <HintPath>..\..\project_dll\_tools\_tools\bin\Debug\_tools.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\fTambahRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\fTambahRole.Designer.cs">
+      <DependentUpon>fTambahRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin\fTambahUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="admin\fTambahUser.Designer.cs">
       <DependentUpon>fTambahUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="transaksi\fTrans.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="transaksi\fTrans.Designer.cs">
-      <DependentUpon>fTrans.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,9 +83,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="transaksi\fTrans.resx">
-      <DependentUpon>fTrans.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -93,6 +93,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="transaksi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
